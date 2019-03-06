@@ -1,0 +1,74 @@
+body {
+    background-color: purple;
+    font-family: "Bangers", cursive;
+    padding:0;
+    font-size: 18px;
+    margin: 0;
+}
+.container {
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(to right top, purple, teal);
+    position: relative;
+    top: 60px;
+    left: 90px;
+    border-radius: 5px;
+    color: #fff;
+}
+p {  
+    text-align: center;
+    padding-bottom: 10px;
+}
+form .example { 
+    margin-bottom: 12px;
+    position: relative;
+    left: 10px;
+}
+form {
+    position: relative;
+    top: 50px;
+    left: 30px;
+    width: 350px;
+}
+input[type="checkbox"] {
+    margin-bottom: 10px;
+    display: none;
+}
+label {
+    cursor: pointer;
+    position: relative;
+    max-width: 100px;
+    word-wrap: break-word;
+}
+label::before,
+label::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+label::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    top: 12px;
+    left: 120px;
+    border-top: 1px solid #fff;
+}
+label::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 110px;
+    background-color: #fff;
+    transition: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+}
+input[type="checkbox"]:checked ~ label::after {
+    transform: translateX(40px);
+    background-color: teal;
+    border-color: teal;
+}
